@@ -126,33 +126,35 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            Container(
-              decoration: BoxDecoration(color: Colors.white, boxShadow: [
-                BoxShadow(
-                    color: Colors.grey,
-                    offset: const Offset(
-                      5.0,
-                      5.0,
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(color: Colors.white, boxShadow: [
+                  BoxShadow(
+                      color: Colors.grey,
+                      offset: const Offset(
+                        5.0,
+                        5.0,
+                      ),
+                      blurRadius: 6),
+                ]),
+                height: 60,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Image.asset(
+                      'assets/bulb.png',
+                      scale: 3,
                     ),
-                    blurRadius: 6),
-              ]),
-              height: 60,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Image.asset(
-                    'assets/bulb.png',
-                    scale: 3,
-                  ),
-                  Image.asset(
-                    'assets/home.png',
-                    scale: 3,
-                  ),
-                  Image.asset(
-                    'assets/settings.png',
-                    scale: 3,
-                  )
-                ],
+                    Image.asset(
+                      'assets/home.png',
+                      scale: 3,
+                    ),
+                    Image.asset(
+                      'assets/settings.png',
+                      scale: 3,
+                    )
+                  ],
+                ),
               ),
             )
           ],
