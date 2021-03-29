@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:folk/custom_widgets/room_card.dart';
+import 'package:folk/size_config.dart';
 
 class HomePage extends StatefulWidget {
   @override
