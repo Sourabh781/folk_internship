@@ -36,89 +36,92 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Colors.grey[50],
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40.0),
-                    topRight: Radius.circular(40.0),
-                  ),
-                ),
+            Hero(
+              tag: "whiteContainer",
+              child: Expanded(
                 child: Container(
-                  margin: EdgeInsets.all(32),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'All Rooms',
-                        style: TextStyle(
-                            fontSize: 28,
-                            color: Colors.indigo[900],
-                            fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 16,
-                      ),
-                      Row(
-                        children: [
-                          RoomCard(
-                            iconPath: 'assets/bed.png',
-                            roomName: 'Bed room',
-                            noL: '4 Lights',
-                          ),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          RoomCard(
-                            iconPath: 'assets/room.png',
-                            roomName: 'Living room',
-                            noL: '2 Lights',
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          RoomCard(
-                            iconPath: 'assets/kitchen.png',
-                            roomName: 'Kitchen',
-                            noL: '5 Lights',
-                          ),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          RoomCard(
-                            iconPath: 'assets/bathtube.png',
-                            roomName: 'Bathroom',
-                            noL: '1 Lights',
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          RoomCard(
-                            iconPath: 'assets/house.png',
-                            roomName: 'Outdoor',
-                            noL: '5 Lights',
-                          ),
-                          SizedBox(
-                            width: 16,
-                          ),
-                          RoomCard(
-                            iconPath: 'assets/balcony.png',
-                            roomName: 'Balcony',
-                            noL: '2 Lights',
-                          )
-                        ],
-                      )
-                    ],
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[50],
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40.0),
+                      topRight: Radius.circular(40.0),
+                    ),
+                  ),
+                  child: Container(
+                    margin: EdgeInsets.all(32),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'All Rooms',
+                          style: TextStyle(
+                              fontSize: 28,
+                              color: Colors.indigo[900],
+                              fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 16,
+                        ),
+                        Row(
+                          children: [
+                            RoomCard(
+                              iconPath: 'assets/bed.png',
+                              roomName: 'Bed room',
+                              noL: '4 Lights',
+                            ),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            RoomCard(
+                              iconPath: 'assets/room.png',
+                              roomName: 'Living room',
+                              noL: '2 Lights',
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            RoomCard(
+                              iconPath: 'assets/kitchen.png',
+                              roomName: 'Kitchen',
+                              noL: '5 Lights',
+                            ),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            RoomCard(
+                              iconPath: 'assets/bathtube.png',
+                              roomName: 'Bathroom',
+                              noL: '1 Lights',
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            RoomCard(
+                              iconPath: 'assets/house.png',
+                              roomName: 'Outdoor',
+                              noL: '5 Lights',
+                            ),
+                            SizedBox(
+                              width: 16,
+                            ),
+                            RoomCard(
+                              iconPath: 'assets/balcony.png',
+                              roomName: 'Balcony',
+                              noL: '2 Lights',
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
