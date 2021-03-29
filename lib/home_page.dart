@@ -1,4 +1,7 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class HomePage extends StatefulWidget {
@@ -38,6 +41,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Expanded(
               child: Container(
+                width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
@@ -46,7 +50,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 child: Column(
-                  children: [],
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [Text('All Rooms')],
                 ),
               ),
             )
