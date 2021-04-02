@@ -193,121 +193,118 @@ class _RoomPageState extends State<RoomPage> {
 
   Expanded buildWhiteCardOfRoomPage(BuildContext context) {
     return Expanded(
-        child: Hero(
-      tag: "whiteContainer",
-      child: Container(
-          margin: EdgeInsets.only(top: 16),
-          width: double.infinity,
-          decoration: BoxDecoration(
-            color: Colors.grey[50],
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(40.0),
-              topRight: Radius.circular(40.0),
+        child: Container(
+            margin: EdgeInsets.only(top: 16),
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: Colors.grey[50],
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(40.0),
+                topRight: Radius.circular(40.0),
+              ),
             ),
-          ),
-          child: Container(
-            margin: EdgeInsets.all(32),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Intensity',
-                  style: lowerCard,
-                ),
-                Container(
-                  margin: EdgeInsets.only(top: 24),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Image.asset(
-                        'assets/solution2.png',
-                        scale: 3,
-                      ),
-                      Expanded(
-                        child: SliderTheme(
-                          data: SliderTheme.of(context)
-                              .copyWith(thumbColor: Colors.black),
-                          child: Slider(
-                              activeColor: Colors.amber[200],
-                              min: 0,
-                              max: 100,
-                              value: bulbIntensity.toDouble(),
-                              onChanged: (double newvalue) {
-                                setState(() {
-                                  bulbIntensity = newvalue.round();
-                                });
-                              }),
+            child: Container(
+              margin: EdgeInsets.all(32),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Intensity',
+                    style: lowerCard,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 24),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Image.asset(
+                          'assets/solution2.png',
+                          scale: 3,
                         ),
+                        Expanded(
+                          child: SliderTheme(
+                            data: SliderTheme.of(context)
+                                .copyWith(thumbColor: Colors.black),
+                            child: Slider(
+                                activeColor: Colors.amber[200],
+                                min: 0,
+                                max: 100,
+                                value: bulbIntensity.toDouble(),
+                                onChanged: (double newvalue) {
+                                  setState(() {
+                                    bulbIntensity = newvalue.round();
+                                  });
+                                }),
+                          ),
+                        ),
+                        Image.asset(
+                          'assets/yellow_bulb.png',
+                          scale: 3,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Colors',
+                    style: lowerCard,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  buildColorBallrow(),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    'Scenes',
+                    style: lowerCard,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      ScenesCard(
+                        label: 'Birthday',
+                        color1: Colors.red[200],
+                        color2: Colors.deepOrange[200],
                       ),
-                      Image.asset(
-                        'assets/yellow_bulb.png',
-                        scale: 3,
+                      SizedBox(
+                        width: 10,
                       ),
+                      ScenesCard(
+                        label: 'Party',
+                        color1: Colors.purple[200],
+                        color2: Colors.purple[100],
+                      )
                     ],
                   ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Colors',
-                  style: lowerCard,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                buildColorBallrow(),
-                SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  'Scenes',
-                  style: lowerCard,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  children: [
-                    ScenesCard(
-                      label: 'Birthday',
-                      color1: Colors.red[200],
-                      color2: Colors.deepOrange[200],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    ScenesCard(
-                      label: 'Party',
-                      color1: Colors.purple[200],
-                      color2: Colors.purple[100],
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                Row(
-                  children: [
-                    ScenesCard(
-                      label: 'Relax',
-                      color1: Colors.blue[200],
-                      color2: Colors.blue[100],
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    ScenesCard(
-                      label: 'Fun',
-                      color1: Colors.green[200],
-                      color2: Colors.green[100],
-                    )
-                  ],
-                )
-              ],
-            ),
-          )),
-    ));
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: [
+                      ScenesCard(
+                        label: 'Relax',
+                        color1: Colors.blue[200],
+                        color2: Colors.blue[100],
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      ScenesCard(
+                        label: 'Fun',
+                        color1: Colors.green[200],
+                        color2: Colors.green[100],
+                      )
+                    ],
+                  )
+                ],
+              ),
+            )));
   }
 
   Row buildColorBallrow() {
