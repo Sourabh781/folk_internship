@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+double height = 0;
+double width = 0;
+double area = 0;
+
 class ScenesCard extends StatelessWidget {
   ScenesCard({this.label, this.color2, this.color1});
   final String label;
@@ -7,27 +11,30 @@ class ScenesCard extends StatelessWidget {
   final Color color2;
   @override
   Widget build(BuildContext context) {
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
+    area = height * width;
     return Expanded(
       child: Container(
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(width / 21.1),
             gradient: LinearGradient(colors: [color1, color2])),
         child: Padding(
-          padding: const EdgeInsets.all(24.0),
+          padding: EdgeInsets.all(width / 17.6),
           child: Row(
             children: [
               Image.asset(
                 'assets/surface2.png',
-                scale: 2,
+                scale: area / 199299,
               ),
               SizedBox(
-                width: 20,
+                width: width / 21.1,
               ),
               Text(
                 label,
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16,
+                    fontSize: width / 26.5,
                     fontWeight: FontWeight.bold),
               )
             ],

@@ -7,8 +7,18 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  double height = 0;
+  double width = 0;
+  double area = 0;
+  @override
   @override
   Widget build(BuildContext context) {
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
+    area = height * width;
+    print(height);
+    print(width);
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.blue[800],
@@ -20,18 +30,18 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                    width: 200,
+                    width: width / 2.1,
                     child: Text(
                       'Control Panel',
                       style: TextStyle(
                           color: Colors.white,
-                          fontSize: 44,
+                          fontSize: width / 9.6,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
                   Image.asset(
                     "assets/user.png",
-                    scale: 4,
+                    scale: area / 99649.55,
                   )
                 ],
               ),
@@ -41,24 +51,24 @@ class _HomePageState extends State<HomePage> {
               decoration: BoxDecoration(
                 color: Colors.grey[50],
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(40.0),
-                  topRight: Radius.circular(40.0),
+                  topLeft: Radius.circular(width / 10.5),
+                  topRight: Radius.circular(width / 10.5),
                 ),
               ),
               child: Container(
-                margin: EdgeInsets.all(32),
+                margin: EdgeInsets.all(width / 13.2),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       'All Rooms',
                       style: TextStyle(
-                          fontSize: 28,
+                          fontSize: width / 15,
                           color: Colors.indigo[900],
                           fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
-                      height: 16,
+                      height: width / 26.5,
                     ),
                     Container(
                       child: Column(
@@ -71,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                                 noL: '4 Lights',
                               ),
                               SizedBox(
-                                width: 16,
+                                width: width / 26.5,
                               ),
                               RoomCard(
                                 iconPath: 'assets/room.png',
@@ -81,7 +91,7 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                           SizedBox(
-                            height: 10,
+                            height: width / 42.3,
                           ),
                           Row(
                             children: [
@@ -91,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                                 noL: '5 Lights',
                               ),
                               SizedBox(
-                                width: 16,
+                                width: width / 26.5,
                               ),
                               RoomCard(
                                 iconPath: 'assets/bathtube.png',
@@ -101,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                           SizedBox(
-                            height: 10,
+                            height: width / 42.3,
                           ),
                           Row(
                             children: [
@@ -111,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                                 noL: '5 Lights',
                               ),
                               SizedBox(
-                                width: 16,
+                                width: width / 26.5,
                               ),
                               RoomCard(
                                 iconPath: 'assets/balcony.png',
@@ -143,15 +153,15 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Image.asset(
                       'assets/bulb.png',
-                      scale: 3,
+                      scale: area / 132866,
                     ),
                     Image.asset(
                       'assets/home.png',
-                      scale: 3,
+                      scale: area / 132866,
                     ),
                     Image.asset(
                       'assets/settings.png',
-                      scale: 3,
+                      scale: area / 132866,
                     )
                   ],
                 ),
